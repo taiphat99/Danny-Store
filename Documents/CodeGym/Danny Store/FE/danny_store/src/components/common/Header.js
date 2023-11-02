@@ -12,7 +12,7 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
-            const visible = currentScrollPos > prevScrollPos && currentScrollPos > 100;
+            const visible = currentScrollPos > prevScrollPos && currentScrollPos > 70;
             setPrevScrollPos(currentScrollPos);
             setInvisible(visible);
         };
@@ -43,15 +43,15 @@ const Header = () => {
                         <Ripple color={"#fff"} duration={1000} />
                     </Button>
                     <Button className="button-with-ripple ">
-                        <a className='option-on-header'>QUẦN</a>
+                        <a className=''>QUẦN</a>
                         <Ripple color={"#fff"} duration={1000} />
                     </Button>
                     <Button className="button-with-ripple">
-                        <a>ÁO</a>
+                        <a className=''>ÁO</a>
                         <Ripple color={"#fff"} duration={1000} />
                     </Button>
                     <Button className="button-with-ripple">
-                        <a>ĐỒ LÓT</a>
+                        <a className=''>ĐỒ LÓT</a>
                         <Ripple color={"#fff"} duration={1000} />
                     </Button>
                 </div>

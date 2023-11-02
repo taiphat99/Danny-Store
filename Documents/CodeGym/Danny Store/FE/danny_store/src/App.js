@@ -4,15 +4,18 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Home from './components/Home';
 import Login from './components/Login';
+import Detail from './components/Detail';
+import QuantityHandler from './components/common/QuantityHandler';
 
 function App() {
   return (
     <>
-      <Login />
+
+      {/* <Login /> */}
       <Header />
-      <Home />
-      <div style={{ height: "500px" }}></div>
-      <Footer />
+      {/* <Home /> */}
+      <Detail />
+      {/* <Footer /> */}
     </>
   );
 }

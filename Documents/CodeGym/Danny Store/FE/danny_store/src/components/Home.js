@@ -60,99 +60,206 @@ const Home = () => {
                     <div className='product-card'>
                         <div className='card-image'>
                             <img src='https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/CM006.thumb1.3_35.jpg' />
-                            <div className='size-list'>
-                                <div className='size-tag'>S</div>
-                                <div className='size-tag'>M</div>
-                                <div className='size-tag'>L</div>
-                                <div className='size-tag'>XL</div>
+                            <div className='size-list-container'>
+                                <div className='size-list-title'>
+                                    Thêm nhanh vào giỏ hàng
+                                </div>
+                                <div className='size-list'>
+                                    <a className='size-tag'>S</a>
+                                    <a className='size-tag'>M</a>
+                                    <a className='size-tag'>L</a>
+                                    <a className='size-tag'>XL</a>
+                                </div>
+                            </div>
+                            <div className='extra-tag-on-top-right-corner'>
+                                New
                             </div>
                         </div>
-                        <div className='card-color-tags'>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
+                        <div className='card-content'>
+                            <div className='card-color-tags'>
+                                <a className='color-tag black-color border-on-focus'></a>
+                                <a className='color-tag gray-color'></a>
+                                <a className='color-tag white-color'></a>
+                                <a className='color-tag navy-color'></a>
+                            </div>
+                            <div className='card-name'>
+                                <p>Jeans Copper Denim Straight</p>
+                            </div>
+                            <div className='card-color-name'>
+                                <p>Đen</p>
+                            </div>
+
+                            <div className='card-color-price'>
+                                <span>1.539.000đ</span>
+                                <span>1.599.000đ</span>
+                                <span>-10%</span>
+                            </div>
                         </div>
-                        <div className='card-name'>
-                            <p>Jeans Copper Denim Straight</p>
-                        </div>
-                        <div className='card-color-name'>
-                            <span>539.000đ</span>
-                            <span>599.000đ</span>
-                            <span>-10%</span>
-                        </div>
+
                     </div>
                     <div className='product-card'>
                         <div className='card-image'>
                             <img src='https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/CM006.thumb1.3_35.jpg' />
+                            <div className='size-list-container'>
+                                <div className='size-list-title'>
+                                    Thêm nhanh vào giỏ hàng
+                                </div>
+                                <div className='size-list'>
+                                    <a className='size-tag'>S</a>
+                                    <a className='size-tag'>M</a>
+                                    <a className='size-tag'>L</a>
+                                    <a className='size-tag'>XL</a>
+                                </div>
+                            </div>
+                            <div className='extra-tag-on-top-right-corner'>
+                                New
+                            </div>
                         </div>
-                        <div className='card-color-tags'>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
+                        <div className='card-content'>
+                            <div className='card-color-tags'>
+                                <a className='color-tag black-color border-on-focus'></a>
+                                <a className='color-tag gray-color'></a>
+                                <a className='color-tag white-color'></a>
+                                <a className='color-tag navy-color'></a>
+                            </div>
+                            <div className='card-name'>
+                                <p>Jeans Copper Denim Straight</p>
+                            </div>
+                            <div className='card-color-name'>
+                                <p>Đen</p>
+                            </div>
+                            <div className='card-color-price'>
+                                <span>1.539.000đ</span>
+                                <span>1.599.000đ</span>
+                                <span>-10%</span>
+                            </div>
                         </div>
-                        <div className='card-name'>
-                            <p>Jeans Copper Denim Straight</p>
-                        </div>
-                        <div className='card-color-name'>
-                            <span>539.000đ</span>
-                            <span>599.000đ</span>
-                            <span>-10%</span>
-                        </div>
+
                     </div>
                     <div className='product-card'>
                         <div className='card-image'>
                             <img src='https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/CM006.thumb1.3_35.jpg' />
+                            <div className='size-list-container'>
+                                <div className='size-list-title'>
+                                    Thêm nhanh vào giỏ hàng
+                                </div>
+                                <div className='size-list'>
+                                    <a className='size-tag'>S</a>
+                                    <a className='size-tag'>M</a>
+                                    <a className='size-tag'>L</a>
+                                    <a className='size-tag'>XL</a>
+                                </div>
+                            </div>
+                            <div className='extra-tag-on-top-right-corner'>
+                                New
+                            </div>
                         </div>
-                        <div className='card-color-tags'>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
+                        <div className='card-content'>
+                            <div className='card-color-tags'>
+                                <a className='color-tag black-color border-on-focus'></a>
+                                <a className='color-tag gray-color'></a>
+                                <a className='color-tag white-color'></a>
+                                <a className='color-tag navy-color'></a>
+                            </div>
+                            <div className='card-name'>
+                                <p>Jeans Copper Denim Straight</p>
+                            </div>
+                            <div className='card-color-name'>
+                                <p>Đen</p>
+                            </div>
+
+                            <div className='card-color-price'>
+                                <span>1.539.000đ</span>
+                                <span>1.599.000đ</span>
+                                <span>-10%</span>
+                            </div>
                         </div>
-                        <div className='card-name'>
-                            <p>Jeans Copper Denim Straight</p>
-                        </div>
-                        <div className='card-color-name'>
-                            <span>539.000đ</span>
-                            <span>599.000đ</span>
-                            <span>-10%</span>
-                        </div>
+
                     </div>
                     <div className='product-card'>
                         <div className='card-image'>
                             <img src='https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/CM006.thumb1.3_35.jpg' />
+                            <div className='size-list-container'>
+                                <div className='size-list-title'>
+                                    Thêm nhanh vào giỏ hàng
+                                </div>
+                                <div className='size-list'>
+                                    <a className='size-tag'>S</a>
+                                    <a className='size-tag'>M</a>
+                                    <a className='size-tag'>L</a>
+                                    <a className='size-tag'>XL</a>
+                                </div>
+                            </div>
+                            <div className='extra-tag-on-top-right-corner'>
+                                New
+                            </div>
                         </div>
-                        <div className='card-color-tags'>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
+                        <div className='card-content'>
+                            <div className='card-color-tags'>
+                                <a className='color-tag black-color border-on-focus'></a>
+                                <a className='color-tag gray-color'></a>
+                                <a className='color-tag white-color'></a>
+                                <a className='color-tag navy-color'></a>
+                            </div>
+                            <div className='card-name'>
+                                <p>Jeans Copper Denim Straight</p>
+                            </div>
+                            <div className='card-color-name'>
+                                <p>Đen</p>
+                            </div>
+
+                            <div className='card-color-price'>
+                                <span>1.539.000đ</span>
+                                <span>1.599.000đ</span>
+                                <span>-10%</span>
+                            </div>
                         </div>
-                        <div className='card-name'>
-                            <p>Jeans Copper Denim Straight</p>
-                        </div>
-                        <div className='card-color-name'>
-                            <span>539.000đ</span>
-                            <span>599.000đ</span>
-                            <span>-10%</span>
-                        </div>
+
                     </div>
                     <div className='product-card'>
                         <div className='card-image'>
                             <img src='https://media.coolmate.me/cdn-cgi/image/width=672,height=990,quality=85,format=auto/uploads/October2023/CM006.thumb1.3_35.jpg' />
+                            <div className='size-list-container'>
+                                <div className='size-list-title'>
+                                    Thêm nhanh vào giỏ hàng
+                                </div>
+                                <div className='size-list'>
+                                    <a className='size-tag'>S</a>
+                                    <a className='size-tag'>M</a>
+                                    <a className='size-tag'>L</a>
+                                    <a className='size-tag'>XL</a>
+                                </div>
+                            </div>
+                            <div className='extra-tag-on-top-right-corner'>
+                                New
+                            </div>
                         </div>
-                        <div className='card-color-tags'>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
-                            <div className='color-tag'></div>
+                        <div className='card-content'>
+                            <div className='card-color-tags'>
+                                <a className='color-tag black-color border-on-focus'></a>
+                                <a className='color-tag gray-color'></a>
+                                <a className='color-tag white-color'></a>
+                                <a className='color-tag navy-color'></a>
+                            </div>
+                            <div className='card-name'>
+                                <p>Jeans Copper Denim Straight</p>
+                            </div>
+                            <div className='card-color-name'>
+                                <p>Đen</p>
+                            </div>
+
+                            <div className='card-color-price'>
+                                <span>1.539.000đ</span>
+                                <span>1.599.000đ</span>
+                                <span>-10%</span>
+                            </div>
                         </div>
-                        <div className='card-name'>
-                            <p>Jeans Copper Denim Straight</p>
-                        </div>
-                        <div className='card-color-name'>
-                            <span>539.000đ</span>
-                            <span>599.000đ</span>
-                            <span>-10%</span>
-                        </div>
+
                     </div>
+
+                </div>
+                <div className=''>
+                    <img className='banner-1' src='https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/mceclip0_74.png' ></img>
                 </div>
             </div>
         </>
