@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Detail from './components/Detail';
 import QuantityHandler from './components/common/QuantityHandler';
+import Input from './components/common/Input';
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -14,8 +16,9 @@ function App() {
       {/* <Login /> */}
       <Header />
       {/* <Home /> */}
-      <Detail />
-      {/* <Footer /> */}
+      {/* <Detail /> */}
+      <Cart />
+      <Footer />
     </>
   );
 }

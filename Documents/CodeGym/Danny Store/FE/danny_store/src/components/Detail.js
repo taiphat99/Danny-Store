@@ -93,18 +93,19 @@ const Detail = () => {
                         <div className='size-button'>L</div>
                         <div className='size-button'>XL</div>
                     </div>
-                    <p className="color-label">Màu sắc: Đen</p>
-
-                    <div className='card-color-tags'>
-                        <a className='color-tag black-color border-on-focus'></a>
-                        <a className='color-tag gray-color'></a>
-                        <a className='color-tag white-color'></a>
-                        <a className='color-tag navy-color'></a>
+                    <p className="color-label">Màu sắc: Xám</p>
+                    <div style={{ width: "50%" }} >
+                        <div className='card-color-tags'>
+                            <a className='border-default' ><div className='color-tag black-color'></div ></a>
+                            <a className='border-default border-on-focus'><div className='color-tag gray-color '></div></a>
+                            <a className='border-default'><div className='color-tag white-color'></div></a>
+                            <a className='border-default'><div className='color-tag navy-color'></div></a>
+                        </div>
                     </div>
 
                     <div className='handle-quantity-n-add-to-cart'>
                         <div className='detail-quantity-handler'>
-                            <QuantityHandler height='40px' />
+                            <QuantityHandler height='6vh' />
                         </div>
                         <div className='detail-add-to-card-container'>
                             <div className='add-to-cart-button'>Thêm vào giỏ hàng</div>
