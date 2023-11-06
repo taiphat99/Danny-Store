@@ -19,8 +19,6 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Date date;
-    @Column(name = "total_money")
-    private Double totalMoney;
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private AppUser userId;

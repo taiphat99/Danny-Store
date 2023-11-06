@@ -28,8 +28,10 @@ public class Product {
     private Color colorId;
     @Column(name = "input_date")
     private Date inputDate;
-
     @JoinColumn(name = "product_children_id", referencedColumnName = "id")
     @ManyToOne
     private ProductChildrenType productChildrenTypeId;
+    @JoinColumn(name = "concept_id",referencedColumnName = "id")
+    @ManyToOne
+    private Concept conceptId;
 }
