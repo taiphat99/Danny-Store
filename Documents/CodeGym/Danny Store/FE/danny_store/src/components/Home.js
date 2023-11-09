@@ -77,7 +77,7 @@ const Home = () => {
                         </div>
                         <div className='card-content'>
                             <div className='card-color-tags'>
-                                <a className='border-default' ><div className='color-tag black-color'></div ></a>
+                                <a className='border-default' ><div className='color-tag black-color'></div></a>
                                 <a className='border-default border-on-focus'><div className='color-tag gray-color '></div></a>
                                 <a className='border-default'><div className='color-tag white-color'></div></a>
                                 <a className='border-default'><div className='color-tag navy-color'></div></a>

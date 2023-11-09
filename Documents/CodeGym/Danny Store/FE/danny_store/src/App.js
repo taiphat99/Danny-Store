@@ -8,17 +8,19 @@ import Detail from './components/Detail';
 import QuantityHandler from './components/common/QuantityHandler';
 import Input from './components/common/Input';
 import Cart from './components/Cart';
+import List from './components/List';
 
 function App() {
   return (
     <>
 
-      {/* <Login /> */}
-      <Header />
+      <Login />
+      {/* <Header /> */}
       {/* <Home /> */}
       {/* <Detail /> */}
-      <Cart />
-      <Footer />
+      {/* <Cart /> */}
+      {/* <List /> */}
+      {/* <Footer /> */}
     </>
   );
 }

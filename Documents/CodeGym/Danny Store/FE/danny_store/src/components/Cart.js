@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './ripple/Button';
 import Ripple from './ripple/Ripple';
+import QuantityHandler from './common/QuantityHandler';
 
 const Cart = () => {
     return (
@@ -38,7 +39,7 @@ const Cart = () => {
                                 <input className='input-default' placeholder='Ghi chú thêm (Ví dụ: Giao hàng giờ hành chính)'></input>
                             </div>
                             <div className='save-address'>
-                                <label style={{ display: "flex", alignItems: "center", gap: "5px", marginLeft: "15px" }}>
+                                <label style={{ display: "flex", alignItems: "center", gap: "5px", fontSize: '0.9vw', marginLeft: "15px" }}>
                                     <input type='checkbox'></input>
                                     Lưu vào sổ địa chỉ để dùng cho lần mua tiếp theo</label>
                             </div>
@@ -63,13 +64,115 @@ const Cart = () => {
                             </div>
                         </div>
                         <div className='submit-form'>
-                            <Button className="button-with-ripple">
-                                <a className=''>ĐỒ LÓT</a>
-                                <Ripple color={"#fff"} duration={1000} />
-                            </Button>
+                            <a className='click-pay'>Thanh toán</a>
                         </div>
                     </div>
-                    <div className='cart-container'></div>
+                    <div className='cart-container'>
+                        <div className='cart-items-container'>
+                            <div className='cart-header'>
+                                <i class='bx bx-cart-alt cart-icon-plus' ></i>
+                                <p className='cart-title'>Giỏ hàng</p>
+                            </div>
+                            <div className='cart-item-card'>
+                                <div className='cart-card-avatar-container'>
+                                    <img className='cart-card-avatar' src='https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/August2022/Polo_v2_navy_1234.jpg' />
+                                </div>
+                                <div className='cart-card-content'>
+                                    <div className='cart-card-name-n-size-n-color-info'>
+                                        <p className='cart-card-name'>Polo thể thao V2</p>
+                                        <div className='color-n-size-info'>
+                                            <span>Xám </span>/<span> size M</span>
+                                        </div>
+                                        <p className='color-n-size-info'>Số lượng: 1</p>
+
+                                    </div>
+                                    <div className='color-n-size-dropdown'>
+                                        <select className='dropdown-custome' id='color-dropdown'>
+                                            <option value="">Xám</option>
+                                            <option value="">Đen</option>
+                                            <option value="">Trắng</option>
+                                        </select>
+                                        <select className='dropdown-custome' id='color-dropdown'>
+                                            <option value="">S</option>
+                                            <option value="">M</option>
+                                            <option value="">L</option>
+                                            <option value="">XL</option>
+                                        </select>
+                                    </div>
+                                    <div className='quantity-handler-n-price-container'>
+                                        <QuantityHandler width='5vw' height='3vh' fontSize='0.8vw' borderRadius='5px' />
+                                        <div className='cart-card-item-price-container'>
+                                            <p className='item-price'>159.000đ</p>
+                                            <p className='line-through-item-price'>189.000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class='bx bx-x delete-icon' ></i>
+                            </div>
+                            <div className='cart-item-card'>
+                                <div className='cart-card-avatar-container'>
+                                    <img className='cart-card-avatar' src='https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/October2023/CM006.thumb1.2_74.jpg' />
+                                </div>
+                                <div className='cart-card-content'>
+                                    <div className='cart-card-name-n-size-n-color-info'>
+                                        <p className='cart-card-name'>Áo khoác gió V3</p>
+                                        <div className='color-n-size-info'>
+                                            <span>Xám </span>/<span> size M</span>
+                                        </div>
+                                        <p className='color-n-size-info'>Số lượng: 1</p>
+
+                                    </div>
+                                    <div className='color-n-size-dropdown'>
+                                        <select className='dropdown-custome' id='color-dropdown'>
+                                            <option value="">Xám</option>
+                                            <option value="">Đen</option>
+                                            <option value="">Trắng</option>
+                                        </select>
+                                        <select className='dropdown-custome' id='color-dropdown'>
+                                            <option value="">S</option>
+                                            <option value="">M</option>
+                                            <option value="">L</option>
+                                            <option value="">XL</option>
+                                        </select>
+                                    </div>
+                                    <div className='quantity-handler-n-price-container'>
+                                        <QuantityHandler width='5vw' height='3vh' fontSize='0.8vw' borderRadius='5px' />
+                                        <div className='cart-card-item-price-container'>
+                                            <p className='item-price'>159.000đ</p>
+                                            <p className='line-through-item-price'>189.000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class='bx bx-x delete-icon' ></i>
+                            </div>
+                            <div className='receipt-info-container'>
+                                <div className='voucher-container'>
+                                    <input className='voucher-input' placeholder='Nhập mã giảm giá'></input>
+                                    <div className='apply-voucher'>Áp dụng</div>
+                                </div>
+                                <div className='receipt-body'>
+                                    <div className='receipt-row'>
+                                        <p>Tạm tính</p>
+                                        <p>618.000đ</p>
+                                    </div>
+                                    <div className='receipt-row'>
+                                        <p>Giảm giá</p>
+                                        <p>0đ</p>
+                                    </div>
+                                    <div className='receipt-row'>
+                                        <p>Phí giao hàng</p>
+                                        <p>Miễn phí</p>
+                                    </div>
+                                </div>
+                                <div className='receipt-total-money-container'>
+                                    <div className='receipt-row'>
+                                        <p>Tổng tiền</p>
+                                        <p className='receipt-total-money'>618.000đ</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
