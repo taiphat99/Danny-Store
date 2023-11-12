@@ -303,6 +303,9 @@ h3.title {
   flex-wrap: wrap;
   position: relative;
 }
+.product-list {
+  border-left: 2px solid black;
+}
 .product-card {
   width: 25%;
   padding: 9px;
@@ -373,7 +376,7 @@ h3.title {
 .size-tag {
   transition: all 0.25s ease;
   font-size: 0.8vw;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 6px;
   padding: 5px 12px;
   background-color: #fff;
@@ -461,6 +464,7 @@ h3.title {
 }
 .remember-me-container {
   margin: 30px 0;
+  display: flex;
 }
 .remember-me-label {
   padding: 10px;
@@ -511,7 +515,7 @@ h3.title {
 }
 .card-name p {
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 0.85vw;
   line-height: 1.8;
 }
 .card-color-price {
@@ -961,7 +965,13 @@ h3.title {
   display: grid;
   grid-template-columns: 2fr 11fr;
 }
+.sort-dropdown {
+  background-color: #8888881c;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
 .sort-form {
+  padding-right: 5px;
 }
 .result-n-sort-button {
   margin: 0 3.7% 10px;
@@ -969,11 +979,13 @@ h3.title {
   justify-content: space-between;
 }
 .type-list {
+  margin-bottom: 20px;
 }
 .type-label-tag {
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-bottom: 15px;
 }
 .avatar-n-name-on-type {
   display: flex;
@@ -982,6 +994,7 @@ h3.title {
 }
 
 .size-list-container-on-list-page {
+  margin-bottom: 15px;
 }
 .size-list {
 }

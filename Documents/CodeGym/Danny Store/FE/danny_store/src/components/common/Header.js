@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
     const [invisible, setInvisible] = useState(false);
-    // const [nameTarget, setNameTarget] = useState('');
-    // const navigate = useNavigate();
+    const [nameTarget, setNameTarget] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {

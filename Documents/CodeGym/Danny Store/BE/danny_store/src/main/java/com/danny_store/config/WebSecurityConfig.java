@@ -57,24 +57,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/api/admin/home/**",
                         "/api/user/confirm/**",
                         "/api/user/resetOTP/**",
-                        "/api/user/login-by-username/**"
+                        "/api/user/login-by-username/**",
+                        "/api/user/register-by-customer"
                 ).permitAll()
 
-                .antMatchers(
-                        "/api/user/information/**",
-                        "/api/user/logout/{userName}/**"
-                ).hasAnyAuthority("ROLE_ADMIN", "ROLE_SALE", "ROLE_BUSINESS", "ROLE_WAREHOUSE")//
-
-
-                .antMatchers(
-                        "/api/admin/sale/**"
-                ).hasAnyAuthority("ROLE_SALE", "ROLE_ADMIN")
-
-                .antMatchers(
-                        "/api/admin/business/product/list/**",
-                        "/api/admin/business/customer/list/**",
-                        "/api/admin/business/type/list/**"
-                ).hasAnyAuthority("ROLE_SALE", "ROLE_ADMIN", "ROLE_BUSINESS")
+//                .antMatchers(
+//                        "/api/user/information/**",
+//                        "/api/user/logout/{userName}/**"
+//                ).hasAnyAuthority("ROLE_ADMIN", "ROLE_SALE", "ROLE_BUSINESS", "ROLE_WAREHOUSE")//
+//
+//
+//                .antMatchers(
+//                        "/api/admin/sale/**"
+//                ).hasAnyAuthority("ROLE_SALE", "ROLE_ADMIN")
+//
+//                .antMatchers(
+//                        "/api/admin/business/product/list/**",
+//                        "/api/admin/business/customer/list/**",
+//                        "/api/admin/business/type/list/**"
+//                ).hasAnyAuthority("ROLE_SALE", "ROLE_ADMIN", "ROLE_BUSINESS")
 
 
                 .anyRequest()//
