@@ -20,9 +20,9 @@ public class AppUserService implements IAppUserService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        AppUser appUser = appUserRepository.findAppUserByName(username);
+        AppUser appUser = appUserRepository.findAppUserByUsername(username);
         if (appUser == null) {
-            throw new UsernameNotFoundException("User name or password is wrong");
+            throw new UsernameNotFoundException("Username or password is wrong");
         }
 
         List<GrantedAuthority> grantList = new ArrayList<>();
@@ -40,14 +40,14 @@ public class AppUserService implements IAppUserService {
 
     @Override
     public Boolean existsByUsername(String userName) {
-        AppUser appUser = appUserRepository.findAppUserByName(userName);
+        AppUser appUser = appUserRepository.findAppUserByUsername(userName);
         return appUser != null;
     }
 
     @Override
     public Boolean createNewAppUser(AppUser appUser, String role) {
         Integer amountAppUserCreated = appUserRepository.createNewAppUser(appUser);
-        AppUser currentAppUser = appUserRepository.findAppUserByName(appUser.getUsername());
+        AppUser currentAppUser = appUserRepository.findAppUserByUsername(appUser.getUsername());
         appUserRepository.insertRoleForCustomer(2, currentAppUser.getId());
         return amountAppUserCreated > 0;
     }
@@ -58,7 +58,18 @@ public class AppUserService implements IAppUserService {
     }
 
     @Override
-    public Long findAppUserIdByUserName(String userName) {
-        return appUserRepository.findIdByUserName(userName);
+    public AppUser findAppUserByUsername(String username) {
+        return appUserRepository.findAppUserByUsername(username);
     }
+
+    @Override
+    public Integer findAppUserIdByUsername(String username) {
+        return appUserRepository.findIdByUserName(username);
+    }
+
+    @Override
+    public void updateUser(String name, String phone, String address, Integer user_id) {
+        appUserRepository.updateUserInfo(name, phone, address, user_id);
+    }
+
 }

@@ -5,6 +5,7 @@ public interface IProductDto {
     String getName();
     Double getPrice();
     Double getSale_price();
+    String getInput_date();
     String getAvatar();
     Integer getColor_id();
     String getColor();
@@ -17,6 +18,7 @@ public interface IProductDto {
     Integer getSize_id();
     String getSize();
     Integer getQuantity();
+    Integer getSales();
 
 
 }

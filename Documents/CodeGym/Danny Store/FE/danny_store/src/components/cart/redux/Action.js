@@ -1,0 +1,10 @@
+export const ADD_TO_CART = "ADD_TO_CART";
+export const GET_CART_LIST = "GET_CART_LIST";
+export const UPDATE_CART_LIST = "UPDATE_CART_LIST";
+export const DELETE_SINGLE_CART = "DELETE_SINGLE_CART";
+export const GET_USER = "GET_USER";
+export const UPDATE_USER = "UPDATE_USER";
+export const UPDATE_QUANTITY = "UPDATE_QUANTITY";
+export const UPDATE_TOTAL_MONEY = "UPDATE_TOTAL_MONEY";
+export const UPDATE_COLOR_ID = "UPDATE_COLOR_ID";
+export const UPDATE_SIZE_ID = "UPDATE_SIZE_ID";

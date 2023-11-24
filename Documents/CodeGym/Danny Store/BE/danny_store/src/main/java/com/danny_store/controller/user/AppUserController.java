@@ -114,5 +114,27 @@ public class AppUserController {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body("Đăng xuất thất bại, vui lòng chờ trong giây lát");
     }
+    @GetMapping("/get-app-user/{username}")
+    public ResponseEntity<AppUser> getAppUserByUsername(@PathVariable String username){
+        AppUser appUser = appUserService.findAppUserByUsername(username);
+        if(appUser!= null){
+            return new ResponseEntity<>(appUser,HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+    @GetMapping("/get-app-user-id/{username}")
+    public ResponseEntity<Integer> getAppUserIdByUsername(@PathVariable String username){
+        Integer id = appUserService.findAppUserIdByUsername(username);
+        if(id!= null){
+            return new ResponseEntity<>(id,HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @PatchMapping("/update-user-info")
+    public ResponseEntity<?> updateUser(@RequestBody AppUserDto appUserDto){
+        appUserService.updateUser(appUserDto.getName(),appUserDto.getPhone(),appUserDto.getAddress(),appUserDto.getId());
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 }

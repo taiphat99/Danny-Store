@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import React from 'react';
+import { Field, Form, Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import Ripple from '../ripple/Ripple';
 import Button from '../ripple/Button';
 import { addJwtTokenToLocalStorage, auth } from '../../service/AuthService';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
+import { GET_USER } from '../cart/redux/Action';
 
 const Login = () => {
-    const [user, setUser] = useState(null);
+    // const [user, setUser] = useState(null);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
 
     const initAccount = {
         username: "",
@@ -20,17 +24,18 @@ const Login = () => {
             const res = await auth(values)
             if (res.status == 200) {
                 toast("Chào mừng bạn đến với Danny Store");
+                addJwtTokenToLocalStorage(res.data.jwtToken);
+                dispatch({ type: GET_USER })
+                navigate('/home');
             } else {
                 toast.error("Tài khoản không hợp lệ")
             }
-
-            addJwtTokenToLocalStorage(res.data.jwtToken);
-            navigate("/home");
         } catch (error) {
             toast.error("Tài khoản không hợp lệ")
         }
 
     }
+
 
 
     return (
@@ -40,7 +45,7 @@ const Login = () => {
                 <div className='login-main'>
                     <div className='login-avatar'>
                         <div className='image-container'>
-                            <img className='login-main-picture' src='/images/signin-image.jpg' />
+                            <img className='login-main-picture' src='/images/signin-image.jpg' alt='login' />
                         </div>
                     </div>
                     <Formik

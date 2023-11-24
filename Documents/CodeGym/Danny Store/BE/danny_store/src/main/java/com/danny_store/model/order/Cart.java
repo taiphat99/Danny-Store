@@ -29,4 +29,5 @@ public class Cart {
     @JoinColumn(name = "size_id", referencedColumnName = "id")
     private Size sizeId;
     private Integer quantity;
+    private Double price;
 }

@@ -16,8 +16,9 @@ import org.springframework.validation.Validator;
 @NoArgsConstructor
 public class AppUserDto implements Validator {
 
-    private Long id;
+    private Integer id;
     private String username;
+    private String name;
     private String password;
     private String phone;
     private String address;

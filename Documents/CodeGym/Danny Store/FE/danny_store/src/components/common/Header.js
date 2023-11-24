@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../ripple/Button';
 import Ripple from '../ripple/Ripple';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { userConverterFromToken } from '../../service/AuthService';
+import { GET_CART_LIST, GET_USER } from '../cart/redux/Action';
+import { useDispatch, useSelector } from 'react-redux';
 
-const Header = () => {
+const Header = ({ cart }) => {
+
     const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
     const [invisible, setInvisible] = useState(false);
-    const [nameTarget, setNameTarget] = useState('');
     const navigate = useNavigate();
+    const [nameTarget, setNameTarget] = useState('');
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,6 +30,7 @@ const Header = () => {
         };
     }, [prevScrollPos]);
 
+
     const handleOnKeyDown = (event) => {
         if (event.key === 'Enter') {
             // if (nameTarget == '') {
@@ -32,27 +39,57 @@ const Header = () => {
             // navigate(`/list/${nameTarget}`);
         }
     }
+    const headingHome = () => {
+        navigate('/');
+    }
+    const headingPants = () => {
+        navigate('/list/2');
+    }
+    const headingShirts = () => {
+        navigate('/list/1');
+    }
+    const headingUnderwears = () => {
+        navigate('/list/3');
+    }
+    const headingSale = () => {
+        navigate('/');
+    }
+    const headingToOrder = () => {
+        if (userConverterFromToken() != null) {
+            navigate('/order');
+        } else {
+            navigate('/login');
+        }
+    }
+
+    const headingToLogin = () => {
+        if (userConverterFromToken() != null) {
+            navigate('/');
+        } else {
+            navigate('/login');
+        }
+    }
 
     return (
         <>
             <header id='header' className={`header ${invisible ? 'invisible' : ''}`}>
-                <img src='./images/logo_danny.png' className='logo' />
+                <img onClick={headingHome} src='https://firebasestorage.googleapis.com/v0/b/c4zone-da49c.appspot.com/o/logo_danny.png?alt=media&token=80ebfdad-a567-448a-9e44-8214d4fd422d' className='logo' />
                 <div className='type-options'>
                     <Button className="button-with-ripple" >
-                        <a className='sale-option option-on-header'>SALE</a>
+                        <a onClick={headingSale} className='sale-option option-on-header'>SALE</a>
                         <Ripple color={"#fff"} duration={1000} />
                     </Button>
                     <Button className="button-with-ripple ">
-                        <a className=''>QUẦN</a>
-                        <Ripple color={"#fff"} duration={1000} />
+                        <a onClick={headingPants} className=''>QUẦN
+                            <Ripple color={"#fff"} duration={1000} /></a>
                     </Button>
                     <Button className="button-with-ripple">
-                        <a className=''>ÁO</a>
-                        <Ripple color={"#fff"} duration={1000} />
+                        <a onClick={headingShirts} className='category-on-navbar'>ÁO
+                            <Ripple color={"#fff"} duration={1000} /></a>
                     </Button>
                     <Button className="button-with-ripple">
-                        <a className=''>ĐỒ LÓT</a>
-                        <Ripple color={"#fff"} duration={1000} />
+                        <a onClick={headingUnderwears} className=''>ĐỒ LÓT
+                            <Ripple color={"#fff"} duration={1000} /></a>
                     </Button>
                 </div>
 
@@ -61,12 +98,12 @@ const Header = () => {
                         <input onKeyDown={handleOnKeyDown} type="text" className="search-bar" placeholder="Tìm kiếm sản phẩm" id='search-name' />
                         <i className="search-icon bx bx-search-alt-2"  ></i>
                     </div>
-                    <div className="header-cart" >
+                    <div className="header-cart" onClick={headingToOrder}>
                         <i className='cart-icon bx bxs-shopping-bag' style={{ color: '#fff' }}  ></i>
-                        <div className='cart-count'><span>7</span></div>
+                        <div className='cart-count'><span>{cart}</span></div>
                     </div>
-                    <div className="header-user" style={{ color: '#fff' }}>
-                        <i className='user-icon bx bxs-user'></i>
+                    <div onClick={headingToLogin} className="header-user" style={{ color: '#fff' }}>
+                        <i className='user-icon bx bxs-user' style={{ color: userConverterFromToken() != null ? "rgb(255 238 111)" : "" }}></i>
                     </div>
                 </div>
             </header >

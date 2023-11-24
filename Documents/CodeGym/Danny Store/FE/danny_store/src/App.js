@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -14,14 +14,17 @@ import Login from './components/user/Login';
 import List from './components/home/List';
 import Detail from './components/home/Detail';
 import { axiosClient } from './service/AxiosClient';
+import Cart from './components/home/Cart';
+
+
+
 
 function App() {
   axiosClient();
   // Lưu jwt lên localstorage
   return (
     <>
-      <ToastContainer></ToastContainer>
-
+      <ToastContainer />
       <Routes>
         <Route path="*" element={<Home />} />
         <Route path="/401" element={<Error401 />} />
@@ -29,12 +32,14 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path='/home' element={<Home />} />
-        <Route path="/list/" element={<List />} />
+        <Route path="/list" element={<List />} />
         <Route path="/list/:type" element={<List />} />
         <Route path="/detail" element={<Detail />} />
 
-        <Route path="/detail/:type/:id" element={<Detail />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route path='/order' element={<Cart />} />
       </Routes>
+
 
     </>
   );
